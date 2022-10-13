@@ -31,7 +31,7 @@ int main(void)
 
     int length_cycle=0;
     int ideal_time=0;
-    float sum_tat=0,sum_wt=0,sum_rt;
+    float sum_tat=0,sum_wt=0,sum_rt=0;
 
     //Reading Process arrival time , brust time , pid 
     for(int i=0;i<n;i++)
@@ -71,7 +71,7 @@ int main(void)
       
         ps[i].tat=ps[i].ct-ps[i].at;
         ps[i].wt=ps[i].tat-ps[i].bt;
-        ps[i].wt=ps[i].rt;
+        ps[i].rt=ps[i].wt;
 
         sum_tat+=ps[i].tat;
         sum_wt+=ps[i].wt;
